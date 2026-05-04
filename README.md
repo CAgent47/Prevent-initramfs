@@ -24,7 +24,8 @@ blkid
 ```
 
 This command will show the partitions, file system type, and UUID.
-If there are multiple partitions, look for the larger size or the one with TYPE="ext4" written on it. This is called the root partition.
+If there are multiple partitions, look for the larger size or the one with `TYPE="ext4"` written on it. This is called the root partition.
+
 ---
 # 2. Check And Repair File System
 
