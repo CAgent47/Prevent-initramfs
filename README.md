@@ -1,9 +1,9 @@
-# Prevent-initramfs
+# Prevent-initramfs 🐧
 
 ---
 # Introduction
 
-Many Linux users, especially on Ubuntu, faced this problem.
+Many Linux users, especially on Ubuntu, faced this problem. 🌍
 
 **Now let's define initramfs and see what it is and why it happens:**
 initramfs is a small, temporary system that Linux runs before it mounts your main hard drive, 
@@ -28,7 +28,7 @@ If there are multiple partitions, look for the larger size or the one with TYPE=
 ---
 # 2. Check And Repair File System
 
-Now we see that, assuming your root partition is /dev/sda5 **(enter the command carefully)**
+Now we see that, assuming your root partition is /dev/sda5 **(⚠️ enter the command carefully ⚠️)**
 
 ```bash
 fsck -y /dev/sda5
@@ -58,39 +58,58 @@ exit
 reboot
 ```
 ---
-**This came from this system, but we need to do something to avoid this problem again.**
+**📁 This came from this system, but we need to do something to avoid this problem again.**
 
 ```bash
 sudo nano /etc/fstab
 ```
 
-**The last line related to Root should be written :**
-*errors=remount-ro*
+**🛠️ The last line related to Root should be written :**
+`errors=remount-ro`
 
 ```bash
 sudo update-initramfs -u
 ```
 
-**Clean the partition first, remove extra files.**
+**🗑️ Clean the partition first, remove extra files.**
 
 ```bash
 sudo journ --vacuum-time=3d
 ```
 
-if use APT:
+➕ if use APT:
 
 ```bash
 sudo apt clean
 ```
 
-**check again partition**
+**🔧 check again partition**
 
 ```bash
 sudo touch /fourcefsck
 ```
 
-**Restart the system and the system will check the hard drive during boot and the file will be deleted after loading.**
+**✅ Restart the system and the system will check the hard drive during boot and the file will be deleted after loading.**
 # Good Lock
 
 ---
+📄 License
 
+MIT — do whatever you want with it. Just don’t blame me if it breaks your Linux. 😄
+
+---
+
+# -👤Created By GodFather 
+
+# -📜MTA Scripter • Linux Learner🐧 • Python Learner • SQL • Bash Scripter 🇺🇸🔥
+
+**Topics:** 
+[#bash](https://github.com/topics/bash) •
+[#linux](https://github.com/topics/linux) •
+[#errors](https://github.com/topics/errors) •
+[#debian](https://github.com/topics/debian) •
+[#ubuntu](https://github.com/topics/ubuntu) •
+
+---
+
+![Tux](https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg)
