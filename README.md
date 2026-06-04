@@ -113,4 +113,4 @@ MIT — do whatever you want with it. Just don’t blame me if it breaks your Li
 
 ---
 
-![Tux](https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg)
+![Banner](banner.png)
